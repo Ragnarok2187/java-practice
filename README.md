@@ -34,3 +34,36 @@ Each person owes: $24.00
 - Formatting money with `printf` and `%.2f`
 - Validating input with a `while` loop
 - Variable scope, and ordering a program as validate, calculate, then print
+
+### GradeCalculator.java
+Averages a set of test scores and gives a letter grade.
+
+**What it does**
+- Asks how many scores to enter, re-asking until it's at least 1
+- Collects each score, re-asking if it isn't between 0 and 100
+- Averages the scores and prints the letter grade (A = 90+, B = 80+, C = 70+, D = 60+, F = below 60)
+
+**How to run it** (Java 11 or newer)
+```
+java GradeCalculator.java
+```
+
+**Example**
+```
+How many scores? 0
+Must be one or more scores. How many scores? 3
+Enter score 1: -5
+Score must be 0-100. Enter a new score 1: 90
+Enter score 2: 150
+Score must be 0-100. Enter a new score 2: 80
+Enter score 3: 70
+Your student's average grade across 3 scores is: 80%
+Your student's grade is: B
+```
+
+**What I learned**
+- Counting with a `for` loop, and avoiding off-by-one errors
+- Keeping a running total with `+=`
+- Nesting a `while` loop inside a `for` loop to validate each input
+- Combining conditions with `||`
+- Choosing a letter grade with an `if / else if` chain
